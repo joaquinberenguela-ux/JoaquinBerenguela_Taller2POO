@@ -89,6 +89,8 @@ public class App {
 			}
 		} while (opcion != "8");
 	}
+	
+	
 
 	private static void menuNuevaPartida() {
 		System.out.println("Ingrese su apodo de jugador:");
