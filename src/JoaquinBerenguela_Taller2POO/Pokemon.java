@@ -5,7 +5,7 @@ public class Pokemon {
     private String nombre,habitat;
     private float porcentajeAparicion;
     private int vida, ataque, defensa, ataqueEspecial, defensaEspecial, velocidad;
-    private String tipo;
+    private String tipo, estado;
 
     public Pokemon(String nombre, String habitat, float porcentajeAparicion, int vida, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad, String tipo) {
         this.nombre = nombre;
@@ -18,6 +18,7 @@ public class Pokemon {
         this.defensaEspecial = defensaEspecial;
         this.velocidad = velocidad;
         this.tipo = tipo;
+        estado = "Vivo";
     }
 
     public String getNombre() {
@@ -98,5 +99,16 @@ public class Pokemon {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public int getStatsTotales() {
+        return vida + ataque + defensa + ataqueEspecial + defensaEspecial + velocidad;
     }
 }
